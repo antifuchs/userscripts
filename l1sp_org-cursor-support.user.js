@@ -66,9 +66,11 @@ function main() {
         if (!handleKeys) return;
         
         switch(event.keyCode) {
+            case 75: // k
             case 38: // up
                 moveCurrentTo(-1);
                 return false;
+            case 74: // j
             case 40: // down
                 moveCurrentTo(+1);
                 return false;
