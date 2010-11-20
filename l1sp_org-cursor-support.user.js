@@ -12,7 +12,7 @@
 // @namespace     http://l1sp.org
 // @description   Let users select an entry using cursor keys.
 // @include       http://l1sp.org/search*
-// @require       http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js
+// @require       http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js
 // ==/UserScript==
 
 // Chrome doesn't support @require. This is annoying, but there's a solution:
@@ -111,8 +111,8 @@ function main() {
     setCurrent();
     // install next/prev handlers
     $(document).keyup(handleKey);
-    $('input[type=text]').focusin(turnOffKeys);
-    $('input[type=text]').focusout(turnOnKeys);
+    $('input[type=text]').focus(turnOffKeys);
+    $('input[type=text]').blur(turnOnKeys);
 
     // A bit of CSS. Ugly, but it does the trick:
     $('body').append($('<style type="text/css">\
